@@ -24,8 +24,8 @@ public class Server
     public static void main(String[] args) throws Exception {
 
         //create Graph and add places
-        String path= "maps/londonMap.csv";
-        String placesPath= "maps/londonPlaces.csv";
+        String path= "legacy-server/maps/londonMap.csv";
+        String placesPath= "legacy-server/maps/londonPlaces.csv";
         final Graph myGraph = CSVReader.mapReader(path);
         final Map<String, String[]> places = CSVReader.placeReader(placesPath);
         System.out.println("Graph created");
@@ -78,8 +78,8 @@ public class Server
                 }
 
                 // Get the values of "startingPoint" and "destination" properties
-                String startingPoint = (String) requestJson.get("startingPoint");
-                String destination = (String) requestJson.get("destination");
+                String startingPoint = (String) requestJson.get("start");
+                String destination = (String) requestJson.get("end");
 
                 System.out.println("request received, start is "+startingPoint+" end is "+ destination);
 
@@ -149,9 +149,7 @@ public class Server
 
             JSONArray JSONStops = new JSONArray();
             while (!thisStep.getStops().isEmpty()) {
-                JSONObject stop = new JSONObject();
-                stop.put("getStop", thisStep.popStop());
-                JSONStops.add(stop);
+                JSONStops.add(thisStep.popStop().toString());
             }
 
             JSONStep.put("stops", JSONStops);

@@ -28,8 +28,8 @@ function App() {
     }
 
     const message = {
-      startingPoint: startingPoint,
-      destination: destination
+      start: startingPoint,
+      end: destination
     };
   
     const requestOptions = {
@@ -207,7 +207,7 @@ function Step({startStop, busLine, time, stops, endStop}) {
   let counter = 0;
   const listItems = stops.map(function(stop) {
     counter++
-    return <li key={counter}>{stop.getStop}</li>;
+    return <li key={counter}>{stop}</li>;
   });
 
   let numberStops = "";
