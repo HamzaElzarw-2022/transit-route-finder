@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/spring-server/spring-server.iml" filepath="$PROJECT_DIR$/spring-server/spring-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/transit-route-finder.iml" filepath="$PROJECT_DIR$/.idea/transit-route-finder.iml" />
-    </modules>
-  </component>
-</project>
