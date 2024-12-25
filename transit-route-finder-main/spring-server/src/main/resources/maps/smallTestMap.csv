@@ -1,0 +1,5 @@
+src,dest,time,line
+A,B,5,X2
+A,C,5,X1
+B,D,3,X3
+C,D,5,X1

@@ -1,0 +1,256 @@
+SRC,DEST,TIME ,LINE
+aldwych,trafalgar square,3,9
+trafalgar square,piccadilly circus,3,9
+piccadilly circus,green park,4,9
+green park,hyde park corner,6,9
+hyde park corner,knightsbridge,4,9
+knightsbridge,royal albert hall,5,9
+royal albert hall,high street kensington,5,9
+high street kensington,hammersmith,6,9
+king's cross,st pancras international,3,10
+st pancras international,euston,4,10
+euston,warren street and euston square,3,10
+warren street and euston square,goodge street and gower street,4,10
+goodge street and gower street,tottenham,4,10
+tottenham,oxford street,3,10
+oxford street,oxford circus,3,10
+oxford circus,bond street,3,10
+bond street,marble arch,3,10
+marble arch,park lane,3,10
+park lane,hyde park corner,5,10
+hyde park corner,knightsbridge,4,10
+knightsbridge,royal albert hall,5,10
+royal albert hall,high street kensington,5,10
+high street kensington,hammersmith,6,10
+liverpool street,bank,8,11
+bank,temple of mithras,4,11
+temple of mithras,mansion house,5,11
+mansion house,st paul's cathedral,2,11
+st paul's cathedral,ludgate circus,5,11
+ludgate circus,fleet street,4,11
+fleet street,aldwych,3,11
+aldwych,trafalgar square,3,11
+trafalgar square,westminster,2,11
+westminster,victoria street ,5,11
+victoria street ,westminster cathedral ,3,11
+westminster cathedral ,victoria ,2,11
+victoria ,victoria coach station,4,11
+victoria coach station,sloane square,5,11
+sloane square,chelsea king's road,8,11
+chelsea king's road,fulham broadway,15,11
+aldwych,trafalgar square,3,13
+trafalgar square,piccadilly circus,3,13
+piccadilly circus,regent street,4,13
+regent street,oxford circus,5,13
+oxford circus,bond street,3,13
+bond street,baker street and gloucester place,5,13
+baker street and gloucester place,lord's cricket ground,3,13
+lord's cricket ground,golders green,6,13
+warren street and euston square,goodge street and gower street,4,14
+goodge street and gower street,tottenham,4,14
+tottenham,shaftesbury avenue,6,14
+shaftesbury avenue,piccadilly circus,5,14
+piccadilly circus,green park,4,14
+green park,hyde park corner,6,14
+hyde park corner,knightsbridge,4,14
+knightsbridge,south kensington,4,14
+south kensington,putney heath,15,14
+pimlico grosvernor road,belgrave road,5,24
+belgrave road,victoria ,2,24
+victoria ,westminster cathedral,3,24
+westminster cathedral,victoria street ,5,24
+victoria street ,westminster,2,24
+westminster,trafalgar square,3,24
+trafalgar square,leicester square,7,24
+leicester square,tottenham,3,24
+tottenham,goodge street and gower street,4,24
+goodge street and gower street,warren street and euston square,4,24
+warren street and euston square,mornington crescent,2,24
+mornington crescent,camden town,3,24
+camden town,hampstead heath,4,24
+marylebone,great portland street,6,453
+great portland street,oxford circus,8,453
+oxford circus,regent street,5,453
+regent street,piccadilly circus,4,453
+piccadilly circus,trafalgar square,3,453
+trafalgar square,westminster,3,453
+westminster,elephant and castle,12,453
+elephant and castle,bricklayer's arms,5,453
+bricklayer's arms,deptford,25,453
+king's cross,st pancras international,3,59
+st pancras international,euston,4,59
+euston,russell square,6,59
+russell square,holborn,3,59
+holborn,kingsway,5,59
+kingsway,aldwych,4,59
+aldwych,waterloo,6,59
+waterloo,kennington road,10,59
+kennington road,streatham hill,13,59
+victoria,hyde park corner,5,73
+hyde park corner,park lane,5,73
+park lane,marble arch,3,73
+marble arch,bond street,3,73
+bond street,oxford circus,3,73
+oxford circus,oxford street,3,73
+oxford street,tottenham,3,73
+tottenham,goodge street and gower street,4,73
+goodge street and gower street,warren street and euston square,4,73
+warren street and euston square,euston,3,73
+euston,st pancras international,4,73
+st pancras international,king's cross,3,73
+king's cross,islington angel,10,73
+islington angel,essex road,4,73
+essex road,stoke newington,15,73
+victoria,hyde park corner,5,38
+hyde park corner,green park,6,38
+green park,piccadilly circus,4,38
+piccadilly circus,shaftesbury avenue,5,38
+shaftesbury avenue,tottenham,6,38
+tottenham,bloomsbury way,4,38
+bloomsbury way,st john street,13,38
+st john street,islington angel,5,38
+islington angel,essex road,4,38
+essex road,clapton pond,20,38
+london bridge,monument,3,43
+monument,bank,3,43
+bank,moorgate,5,43
+moorgate,old street,17,43
+old street,islington angel,4,43
+islington angel,frien barnet,40,43
+baker street and gloucester place,marble arch,3,74
+marble arch,park lane,3,74
+park lane,hyde park corner,5,74
+hyde park corner,knightsbridge,4,74
+knightsbridge,south kensington,4,74
+south kensington,putney  ,39,74
+waterloo,aldwych,6,139
+aldwych,trafalgar square,3,139
+trafalgar square,piccadilly circus,3,139
+piccadilly circus,regent street,4,139
+regent street,oxford circus,5,139
+oxford circus,bond street,3,139
+bond street,baker street and gloucester place,5,139
+baker street and gloucester place,lisson grove,4,139
+lisson grove,abbey road,5,139
+abbey road,west hampstead,12,139
+camberwell,walworth road,12,148
+walworth road,elephant and castle,6,148
+elephant and castle,westminster,12,148
+westminster,victoria street ,2,148
+victoria street ,westminster cathedral,5,148
+westminster cathedral,victoria,3,148
+victoria,hyde park corner,5,148
+hyde park corner,park lane,5,148
+park lane,marble arch,3,148
+marble arch,lancaster gate,4,148
+lancaster gate,queensway,5,148
+queensway,notting hill gate,7,148
+notting hill gate,white city,13,148
+paddington basin,paddington,3,159
+paddington,edgware road,4,159
+edgware road,marble arch,3,159
+marble arch,bond street,3,159
+bond street,oxford circus,3,159
+oxford circus,regent street,5,159
+regent street,piccadilly circus,4,159
+piccadilly circus,trafalgar square,3,159
+trafalgar square,westmister,3,159
+westmister,kennington road,2,159
+kennington road,streatham,12,159
+russell square,holborn,3,188
+holborn,kingsway,5,188
+kingsway,aldwych,4,188
+aldwych,waterloo,6,188
+waterloo,elephant and castle,4,188
+elephant and castle,bricklayer's arms,5,188
+bricklayer's arms,bermondsey market,3,188
+bermondsey market,tower bridge road,8,188
+tower bridge road,north greenwich,13,188
+lancaster gate,marble arch,4,274
+marble arch,baker street and gloucester place,3,274
+baker street and gloucester place,lord's cricket ground,3,274
+lord's cricket ground,the zoo,4,274
+the zoo,camden town,4,274
+camden town,camden road,2,274
+camden road,york way,3,274
+york way,caledonian road,4,274
+caledonian road,islington angel,6,274
+archway,york way,8,390
+york way,king's cross,2,390
+king's cross,st pancras international,3,390
+st pancras international,euston,4,390
+euston,warren street and euston square,3,390
+warren street and euston square,goodge street and gower street,4,390
+goodge street and gower street,tottenham,4,390
+tottenham,oxford street,3,390
+oxford street,oxford circus,3,390
+oxford circus,bond street,3,390
+bond street,marble arch,3,390
+marble arch,lancaster gate,4,390
+lancaster gate,queensway,5,390
+queensway,notting hill gate,7,390
+victoria,hyde park corner,5,C2
+hyde park corner,green park,6,C2
+green park,berkeley square,3,C2
+berkeley square,conduit street,4,C2
+conduit street,regent street,5,C2
+regent street,oxford circus,5,C2
+oxford circus,great portland street,8,C2
+great portland street,albany street,4,C2
+albany street,camden town,3,C2
+camden town,parliament hill fields,10,C2
+tower gateway,tower bridge road,4,RV1
+tower bridge road,london bridge,3,RV1
+london bridge,tate modern,4,RV1
+tate modern,upper ground,5,RV1
+upper ground,london eye,3,RV1
+london eye,waterloo,2,RV1
+waterloo,aldwych,6,RV1
+aldwych,convent garden,7,RV1
+oxford circus,oxford street,3,25
+oxford street,tottenham,3,25
+tottenham,holborn,3,25
+holborn,chancery lane,4,25
+chancery lane,holborn viaduct,5,25
+holborn viaduct,bank,6,25
+bank,aldgate,3,25
+aldgate,ilford,3,25
+oxford circus,oxford street,3,8
+oxford street,tottenham,3,8
+tottenham,holborn,3,8
+holborn,chancery lane,4,8
+chancery lane,holborn viaduct,5,8
+holborn viaduct,bank,6,8
+bank,liverpool street,8,8
+liverpool street,shoreditch high street,4,8
+shoreditch high street,Bow,10,8
+regent street,piccadilly circus,4,15
+piccadilly circus,trafalgar square,3,15
+trafalgar square,aldwych,3,15
+aldwych,fleet street,3,15
+fleet street,ludgate circus,4,15
+ludgate circus,st paul's cathedral,5,15
+st paul's cathedral,mansion house,2,15
+mansion house,monument,3,15
+monument,tower hill,3,15
+tower hill,tower gateway,3,15
+tower gateway,aldgate,3,15
+aldgate,blackwall,11,15
+liverpool street,bank,8,23
+bank,temple of mithras,4,23
+temple of mithras,mansion house,5,23
+mansion house,st paul's cathedral,2,23
+st paul's cathedral,ludgate circus,5,23
+ludgate circus,fleet street,4,23
+fleet street,aldwych,3,23
+aldwych,trafalgar square,3,23
+trafalgar square,piccadilly circus,3,23
+piccadilly circus,regent street,4,23
+regent street,oxford circus,5,23
+oxford circus,bond street,3,23
+bond street,marble arch,3,23
+marble arch,edgware road,3,23
+edgware road,paddington,4,23
+paddington,ladbroke grove,4,23
+ladbroke grove,ladbroke grove saintsbury's,3,23
+ladbroke grove saintsbury's,westbourne park,4,23

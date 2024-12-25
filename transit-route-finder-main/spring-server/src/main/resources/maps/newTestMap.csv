@@ -1,0 +1,16 @@
+src,dest,time,line
+A,B,5,X2
+A,C,5,X1
+B,D,3,X3
+C,D,5,X1
+D,E,4,X3
+D,F,5,X1
+E,G,3,X4
+F,G,5,X1
+C,H,4,X5
+H,F,3,X5
+F,G,5,X5
+B,I,4,X2
+I,E,5,X4
+I,J,5,X3
+J,E,5,X3

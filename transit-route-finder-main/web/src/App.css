@@ -1,0 +1,125 @@
+html, body, #root, .App {
+  height: 100%
+}
+
+.App{
+  display: flex;
+}
+
+.mapDiv{
+  background-color: rgb(255, 255, 255);
+  width: 70%;
+  height: 100%;
+}
+.mapImage {
+  width: 100%;
+  height: 99%;
+}
+.contentDiv{
+  background-color: #52575D;
+  width: 30%;
+  min-width: 347.2px;
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.item{
+  display: block;
+  font-size: 24px;
+
+}
+.textbox{
+  margin-bottom: 10px;
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+}
+.label{
+  margin-bottom: 5px;
+  color: aliceblue;
+}
+.button{
+  background-color: #FDDB3A;
+  border: none;
+  
+  color: #41444B;
+  font-size: 24px;
+  width: 307.2px;
+  height: 35.2px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.controlDiv{
+  padding: 20px;
+  width: 307.2px;
+  min-height: 209.6;
+  margin: auto;
+}
+.steps{
+  overflow-y: auto;
+  max-height: 496px;
+}
+.step{
+  display: flex;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+.sideBar{
+  width: 25px;
+  min-height: 100%;
+  background-color: #FDDB3A;
+  border-radius: 12.5px;
+}
+.stepContent{
+  padding: 5px 0px 10px 10px;
+  
+  color: aliceblue;
+}
+
+.start{
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.end{
+  font-size: 20px;
+  margin-top: 20px;
+}
+.lineNumber{
+  background-color: #FDDB3A;
+  color: #41444B;
+  padding: 3px;
+  font-size: 18px;
+  border-radius: 7px;
+  display: inline;
+  margin-right: 10px;
+}
+.time{
+  font-size: 18px;
+  display: inline;
+}
+.stops{
+  margin-top: 20px;
+}
+.stopsList{
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+.Totaltime {
+  font-size: 20px;
+  color: aliceblue;
+}
+.busicon {
+  width: 25px;
+  margin-top: 9px;
+
+}
+.walkicon {
+  width: 15px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.red{
+  color: red;
+  margin-left: 30px;
+}
