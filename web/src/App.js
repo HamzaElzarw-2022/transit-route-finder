@@ -1,238 +1,112 @@
-import logo from './logo.svg';
-import './App.css';
-import { useState } from 'react';
+// ./gradlew bootRun
+import "./App.css";
+import { useState } from "react";
+import Control from "./components/Control";
+import EndPlace from "./components/EndPlace";
+import StartPlace from "./components/StartPlace";
+import TotalTime from "./components/TotalTime";
+import Step from "./components/Step";
 
 function App() {
-
   const [problem, setProblem] = useState();
-  const [steps, setsteps] = useState();
+  const [steps, setSteps] = useState();
   const [totalTime, setTotalTime] = useState();
   const [startStep, setStartStep] = useState();
   const [endStep, setEndStep] = useState();
-  
 
   function onclick(startingPoint, destination) {
+    console.log("Button Clicked!");
+    console.log("Start Point:", startingPoint);
+    console.log("Destination:", destination);
 
-    console.log("button Clicked!!")
-    console.log("start point: " + startingPoint)
-    console.log("destination: " + destination)
+    setProblem(null);
+    setSteps(null);
+    setStartStep(null);
+    setEndStep(null);
+    setTotalTime(null);
 
-    setProblem(<></>);
-    setEndStep(<></>);
-    setStartStep(<></>);
-    setTotalTime(<></>);
-    setsteps(<></>);
-
-    if(startingPoint == destination) {
-      
+    if (!startingPoint || !destination) {
+      setProblem(
+        <div className="Totaltime red">
+          {startingPoint ? "You didn't enter a destination point" : "You didn't enter a starting point"}
+        </div>
+      );
+      return;
     }
 
-    const message = {
-      start: startingPoint,
-      end: destination
-    };
-  
-    const requestOptions = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin' : '*'},
-      body: JSON.stringify(message)
-    };
+    if (startingPoint === destination) {
+      setProblem(<div className="Totaltime red">Starting point and destination cannot be the same.</div>);
+      return;
+    }
 
-    fetch('http://localhost:8080/api', requestOptions)
-    .then(function(response) {
-      if (response.ok) {
+    const message = { start: startingPoint, end: destination };
+    fetch("http://localhost:8080/api", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(message),
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error("Network response was not OK");
         return response.json();
-      }
-      setProblem(
-        <div className='Totaltime red'>
-            Network response was not OK
-          </div>
-      );
-      throw new Error('Network response was not OK');
-    }).then(function(allData) {
+      })
+      .then((allData) => {
+        console.log("API Response:", allData);
 
-      console.log(allData);
-      
-      if(allData.status == "noEnd") {
-        setProblem(
-          <div className='Totaltime red'>
-            there is no such a destination in the map.
-          </div>
-        )
-        
-      }
-      else if(allData.status == "noStart") {
-        setProblem(
-          <div className='Totaltime red'>
-            there is no such a starting point in the map.
-          </div>
-        )
-        
-      }
-      else {
-        
-        setTotalTime(
-          <TotalTime time={allData.totalTime} />
-        );
-        setStartStep(
-          <StartPlace place={allData.startPlace} vertex={allData.startPlaceVertex} walkTime={allData.startWalkTime} />
-        );
-        setEndStep(
-          <EndPlace place={allData.endPlace} vertex={allData.endPlaceVertex} walkTime={allData.endWalkTime} />
-        );
-  
-        let counter = 0;
-        setsteps(
-          allData.steps.map(function(step) {
-            counter++;
-            return (<Step 
-             key={counter}
-              startStop={step.startVertex} 
-              busLine={step.line} 
-              time={step.time} 
-              stops={step.stops}
-              endStop={step.endVertex}
-            />)
-          }
-        ));
+        if (allData.status === "noEnd") {
+          setProblem(<div className="Totaltime red">There is no such a destination in the map.</div>);
+        } else if (allData.status === "noStart") {
+          setProblem(<div className="Totaltime red">There is no such a starting point in the map.</div>);
+        } else {
+          setTotalTime(allData.totalTime);
+          setStartStep(
+            <StartPlace
+              place={allData.startPlace}
+              vertex={allData.startPlaceVertex}
+              walkTime={allData.startWalkTime}
+            />
+          );
+          setEndStep(
+            <EndPlace
+              place={allData.endPlace}
+              vertex={allData.endPlaceVertex}
+              walkTime={allData.endWalkTime}
+            />
+          );
 
-      }
-      
-    }).catch(function(error) {
-
-      setProblem(
-        <div className='Totaltime red'>
-          Couldn't connect to the Server
-        </div>
-      )
-
-      console.log('Error:', error.message);
-    });
+          setSteps(
+            allData.steps.map((step, index) => (
+              <Step
+                key={index}
+                startStop={step.startVertex}
+                busLine={step.line}
+                time={step.time}
+                stops={step.stops}
+                endStop={step.endVertex}
+              />
+            ))
+          );
+        }
+      })
+      .catch((error) => {
+        setProblem(<div className="Totaltime red">Couldn't connect to the Server</div>);
+        console.error("Error:", error.message);
+      });
   }
-
 
   return (
     <div className="App">
-      <div className='mapDiv'>
-        <img className="mapImage" src={require('./londonMap updated.png')} alt="londonMap"/>
+      <div className="mapDiv">
+        <img className="mapImage" src={require("./londonMap updated.png")} alt="londonMap" />
       </div>
       <div className="contentDiv">
-
-        <Control onclick={onclick}/>
-
+        <Control onclick={onclick} />
         <div className="steps">
-
           {problem}
-          {totalTime}
+          {totalTime && <TotalTime time={totalTime} />}
           {startStep}
           {steps}
           {endStep}
-
         </div>
-
-      </div> 
-    </div>
-  );
-}
-
-function Control({onclick}) {
-  
-  let startingPoint = "";
-  let destination = "";
-
-  return(
-    <div className="controlDiv">
-      
-        <label className="item label">Starting Point: </label>
-        <input className="item textbox" type="text" onChange={(e) => {startingPoint = e.target.value}}></input>
-      
-        <label className="item label">Destination: </label>
-        <input className="item textbox" type="text" onChange={(e) => {destination = e.target.value}}></input>
-  
-        <button className="item button" onClick={() => {onclick(startingPoint, destination)}}>Directions</button>
-      
-    </div>
-  );
-}
-function TotalTime({time}) {
-
-  return(
-    <div className="step">
-      <div className='Totaltime'>Journey should take {time} minutes</div>
-    </div>
-  );
-}
-function StartPlace({place, vertex, walkTime}) {
-
-  if(place === "none")
-    return <></>
-
-  return(
-    <div className="step">
-      <div className="sideBar">
-        <img className="walkicon" src={require('./walkImage.png')} alt="londonMap"/>
-      </div>
-      <div className="stepContent">
-        <div className='start'>{place}</div>
-        <div className='lineNumber'>Walk</div>
-        <div className='time'>{walkTime} minutes</div>
-        <div className='end'>{vertex} Station</div>
-      </div>
-    </div>
-  );
-}
-function EndPlace({place, vertex, walkTime}) {
-
-  if(place === "none")
-  return <></>
-
-  return(
-    <div className="step">
-      <div className="sideBar">
-      <img className="walkicon" src={require('./walkImage.png')} alt="londonMap"/>
-      </div>
-      <div className="stepContent">
-        <div className='start'>{vertex} Station</div>
-        <div className='lineNumber'>Walk</div>
-        <div className='time'>{walkTime} minutes</div>
-        <div className='end'>{place}</div>
-      </div>
-    </div>
-  );
-}
-function Step({startStop, busLine, time, stops, endStop}) {
-
-  let counter = 0;
-  const listItems = stops.map(function(stop) {
-    counter++
-    return <li key={counter}>{stop}</li>;
-  });
-
-  let numberStops = "";
-
-  if(stops.length === 0) {
-    numberStops = "ride " + 1 + " stop";
-  }
-  else {
-    numberStops = "ride " + (stops.length + 1) + " stops:";
-  }
-
-  return(
-    <div className="step">
-      <div className="sideBar">
-      <img className="busicon" src={require('./bus image.png')} alt="londonMap"/>
-      </div>
-      <div className="stepContent">
-        <div className='start'>{startStop}</div>
-        <div className='lineNumber'>{busLine}</div>
-        <div className='time'>{time} minutes</div>
-        <div className='stops'>
-          {numberStops}
-          <ul className='stopsList'>{listItems}</ul>
-        </div>
-        <div className='end'>{endStop}</div>
       </div>
     </div>
   );
